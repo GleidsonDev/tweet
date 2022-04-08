@@ -1,0 +1,120 @@
+* {
+  font-family: "Roboto", sans-serif;
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 15px;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+:root {
+  --text: #0F1419;
+  --icons-text: #536471;
+  --border: #DADDDF;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /*Para centralizar verticalmente tem que passar uma altura, nesse caso 100% da altura da tela*/
+}
+
+.container-tweet {
+  width: 591px;
+  height: 161px;
+  display: flex;
+  border: 1px solid var(--border);
+  padding: 17px 84px 17px 17px; /*Espaço interno*/
+  box-sizing: border-box;
+}
+
+.image {
+  margin-right: 12px; /*Espaçamento entre a imagem e o texto do lado direito*/
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header h1 {
+  margin-right: 3px;
+  font-weight: 700;
+}
+
+.header h2 {
+  margin-right: 3px;
+  color: var(--icons-text);
+  font-weight: 500;
+}
+
+.verify {
+  height: 15px;
+  width: 15px;
+  margin-right: 6px;
+}
+
+.dot {
+  width: 3px;
+  height: 3px;
+  background: var(--icons-text);
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 3px;
+}
+
+.date {
+  color: var(--icons-text);
+}
+
+.main {
+  margin-bottom: 16px;
+}
+
+.main p {
+  color: var(--text);
+}
+
+.margin {
+  margin-bottom: 20px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box img {
+  margin-right: 18px;
+  transition-duration: 300ms;
+  cursor: pointer;
+}
+
+.box img:hover {
+  transform: scale(1.1);
+}
+
+.box small:hover {
+  color: var(--icons-text);
+}
+
+@media (max-width: 1024px) {
+  .container-tweet {
+    padding: 10px;
+    margin: 0 10px;
+  }
+
+  .box img {
+    margin-right: 5px;
+  }
+}
